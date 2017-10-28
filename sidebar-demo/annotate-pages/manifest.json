@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+    "name": "Web Page Annotating Assistant",
+    "description": "Display a sidebar that lets you take notes for webpages",
+    "version": "1.0",
+    "applications": {
+        "gecko": {
+            "strict_min_version": "54.0a1"
+      }
+    },
+
+    "background": {
+        "page": "background/background.html"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/star.png"
+        }
+    },
+    
+    "sidebar_action": {
+        "default_icon": "icons/star.png",
+        "default_title" : "Annotator",
+        "default_panel": "sidebar/panel.html"
+    },
+
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+
+    "commands": {
+        "_execute_sidebar_action": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+Y"
+          }
+        }
+    }
+
+}
